@@ -4,9 +4,9 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import 'package:validation/widget/CustomBodyText.dart';
-import 'package:validation/widget/CustomElevatedButton.dart';
+import 'package:validation/widgetvalidation/CustomElevatedValidationButton.dart';
 import 'package:validation/widget/CustomTextFieldValidation.dart';
-import 'package:validation/widget/ValidationFunction.dart';
+import 'package:validation/function/ValidationFunction.dart';
 
 class ShowinfBottomSheet {
   static Future bottomSheet(BuildContext context1) {
@@ -91,18 +91,10 @@ class ShowinfBottomSheet {
                         confirmPWController.text == "" ||
                         newPWController.text == "" ||
                         oldPWController.text == "") {
-                      validation.getDialogDefult();
-                      validation.getToast();
+                      validation.getErrorDialogDefult();
+                      validation.getErrorToast();
                     } else {
-                      Fluttertoast.showToast(
-                          msg: "تم تغيير كلمة المرور",
-                          toastLength: Toast.LENGTH_SHORT,
-                          gravity: ToastGravity.BOTTOM,
-                          timeInSecForIosWeb: 6,
-                          backgroundColor:
-                              const Color.fromARGB(255, 50, 161, 23),
-                          textColor: Colors.white,
-                          fontSize: 16.0);
+                      validation.getSucessToast();
                     }
                   },
                 ),

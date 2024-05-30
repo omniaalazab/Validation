@@ -1,30 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
 import 'package:validation/widget/CustomBodyText.dart';
 
 class validation {
-  // static Future<dynamic> CheckPasswordMAtch(TextEditingController oldPW,
-  //     TextEditingController newpw, TextEditingController cofirmpw) {
-  //   if (cofirmpw.text != newpw.text ||
-  //       cofirmpw.text == "" ||
-  //       newpw.text == "" ||
-  //       oldPW.text == "") {
-  //     return getDialogDefult();
-
-  //   } else {
-  //     return Fluttertoast.showToast(
-  //         msg: "تم تغيير كلمة المرور",
-  //         toastLength: Toast.LENGTH_SHORT,
-  //         gravity: ToastGravity.BOTTOM,
-  //         timeInSecForIosWeb: 6,
-  //         backgroundColor: const Color.fromARGB(255, 50, 161, 23),
-  //         textColor: Colors.white,
-  //         fontSize: 16.0);
-  //   }
-  // }
-
   static Future getDialogDefult() {
     return Get.defaultDialog(
       // titlePadding:
@@ -71,6 +51,19 @@ class validation {
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 6,
           backgroundColor: Colors.red,
+          textColor: Colors.white,
+          fontSize: 16.0);
+    });
+  }
+
+  static Future getSucessToast() {
+    return Future.delayed(const Duration(seconds: 3)).then((value) {
+      Fluttertoast.showToast(
+          msg: "تم تغيير كلمة المرور",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 6,
+          backgroundColor: const Color.fromARGB(255, 50, 161, 23),
           textColor: Colors.white,
           fontSize: 16.0);
     });
