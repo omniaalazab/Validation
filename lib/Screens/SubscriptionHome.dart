@@ -108,7 +108,7 @@ class Home extends StatelessWidget {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(150, 60),
-                        backgroundColor: Colors.orange,
+                        backgroundColor: HexColor("EFA134"),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
