@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/widget/CustomBodyText.dart';
+import 'package:validation/widget/CommonWidget/CustomBodyText.dart';
+
 import 'package:validation/widget/CustomDropdownMenu.dart';
-import 'package:validation/widgetvalidation/CustomElevatedValidationButton.dart';
-import 'package:validation/widget/CustomTextFeild.dart';
+import 'package:validation/widget/CommonWidget/CustomElevatedButton.dart';
+import 'package:validation/widget/CommonWidget/CustomTextFeild.dart';
 
 import 'package:validation/function/ShowingBottomSheetFunctio.dart';
 
@@ -121,7 +122,7 @@ class _HomeState extends State<Home> {
                   const SizedBox(
                     height: 30,
                   ),
-                  CustomElevatedValidationButton(
+                  CustomElevatedButton(
                     fontcolor: HexColor("1E1E24"),
                     textsize: 14,
                     fontWeight: FontWeight.w700,
@@ -130,15 +131,15 @@ class _HomeState extends State<Home> {
                       ShowinfBottomSheet.bottomSheet(context);
                     },
                     backcolor: Colors.white,
-                    sidecolor: HexColor("EFA134"),
+                    sidebuttoncolor: HexColor("EFA134"),
                   ),
                   const SizedBox(
                     height: 50,
                   ),
-                  CustomElevatedValidationButton(
+                  CustomElevatedButton(
                       buttontext: "تحديث",
                       onPressedFunction: () {},
-                      sidecolor: HexColor("1E1E24"),
+                      sidebuttoncolor: HexColor("1E1E24"),
                       backcolor: HexColor("1E1E24"),
                       fontWeight: FontWeight.bold,
                       fontcolor: Colors.white),

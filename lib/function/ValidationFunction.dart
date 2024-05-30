@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:validation/widget/CustomBodyText.dart';
 
 class validation {
-  static Future getDialogDefult() {
+  static Future getErrorDialogDefult() {
     return Get.defaultDialog(
       // titlePadding:
       //     const EdgeInsets.only(top: 10),
@@ -43,7 +43,7 @@ class validation {
     );
   }
 
-  static Future getToast() {
+  static Future getErrorToast() {
     return Future.delayed(const Duration(seconds: 3)).then((value) {
       Fluttertoast.showToast(
           msg: "كلمة المرور السابقة غير صحيحة",

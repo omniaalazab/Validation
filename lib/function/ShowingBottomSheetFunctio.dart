@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:hexcolor/hexcolor.dart';
+import 'package:validation/widget/CommonWidget/CustomBodyText.dart';
 
-import 'package:validation/widget/CustomBodyText.dart';
-import 'package:validation/widgetvalidation/CustomElevatedValidationButton.dart';
+import 'package:validation/widget/CommonWidget/CustomElevatedButton.dart';
 import 'package:validation/widget/CustomTextFieldValidation.dart';
 import 'package:validation/function/ValidationFunction.dart';
 
@@ -81,7 +80,7 @@ class ShowinfBottomSheet {
                 ),
                 CustomElevatedButton(
                   textsize: 18,
-                  sidecolor: HexColor("1E1E24"),
+                  sidebuttoncolor: HexColor("1E1E24"),
                   backcolor: HexColor("1E1E24"),
                   fontWeight: FontWeight.normal,
                   fontcolor: Colors.white,

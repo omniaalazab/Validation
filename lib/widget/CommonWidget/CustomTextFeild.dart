@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/widget/CustomBodyText.dart';
+import 'package:validation/widget/CommonWidget/CustomBodyText.dart';
 
 class CustomTextfield extends StatelessWidget {
   CustomTextfield(
