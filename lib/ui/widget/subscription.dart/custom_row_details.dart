@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:validation/widget/CustomBodyText.dart';
-
-import 'package:validation/widget/CommonWidget/CustomSmallContainer.dart';
+import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+import 'package:validation/ui/widget/shared_widget/CustomSmallContainer.dart';
 
 class CustomRowDetail extends StatelessWidget {
   CustomRowDetail({super.key, required this.title, required this.title2});

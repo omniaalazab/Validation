@@ -15,9 +15,9 @@ class CustomRadioListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RadioListTile(
-        title: const Text(
+        title: Text(
           RadioTitle,
-          style: TextStyle(
+          style: const TextStyle(
               fontFamily: "Cairo", fontSize: 14, fontWeight: FontWeight.w500),
         ),
         value: RadioValue,

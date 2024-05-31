@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:hexcolor/hexcolor.dart';
 
-import 'package:validation/widget/CustomBodyText.dart';
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/widget/shared_widget/custom_small_container.dart';
+import 'package:validation/ui/widget/subscription.dart/custom_row_details.dart';
 
-import 'package:validation/widgetSubscribtion/CustomRowDetails.dart';
-import 'package:validation/widgetSubscribtion/CustomRowbakaContent.dart';
-import 'package:validation/widget/CommonWidget/CustomSmallContainer.dart';
+import 'package:validation/widget/widgetSubscribtion/CustomRowbakaContent.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

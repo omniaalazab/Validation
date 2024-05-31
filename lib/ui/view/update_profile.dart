@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/widget/CommonWidget/CustomBodyText.dart';
+import 'package:validation/controller/change_password_bottom_sheet.dart';
+import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+import 'package:validation/update_profile/CustomDropdownMenu.dart';
 
-import 'package:validation/widget/CustomDropdownMenu.dart';
+import 'package:validation/ui/widget/shared_widget/CustomElevatedButton.dart';
 import 'package:validation/widget/CommonWidget/CustomElevatedButton.dart';
-import 'package:validation/widget/CommonWidget/CustomTextFeild.dart';
 
-import 'package:validation/function/ShowingBottomSheetFunctio.dart';
+import 'package:validation/widget/CustomTextFeild.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -128,7 +129,7 @@ class _HomeState extends State<Home> {
                     fontWeight: FontWeight.w700,
                     buttontext: "تغيير كلمة المرور",
                     onPressedFunction: () {
-                      ShowinfBottomSheet.bottomSheet(context);
+                      ChangePasswordBottomSheet.bottomSheet();
                     },
                     backcolor: Colors.white,
                     sidebuttoncolor: HexColor("EFA134"),

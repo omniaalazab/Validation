@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:validation/Home.dart';
+import 'package:validation/ui/view/update_profile.dart';
 
 void main() {
   runApp(const Validation());

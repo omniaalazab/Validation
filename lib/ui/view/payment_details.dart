@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/widget/CommonWidget/CustomBodyText.dart';
+import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
 
-import 'package:validation/widget/CommonWidget/CustomTextFeild.dart';
-import 'package:validation/widgetClean/CustomColumnSummaryOrder.dart';
-import 'package:validation/widgetClean/CustomRadioListTile.dart';
+import 'package:validation/widget/CustomTextFeild.dart';
+import 'package:validation/widget/widgetClean/CustomColumnSummaryOrder.dart';
+import 'package:validation/widget/widgetClean/CustomRadioListTile.dart';
 
-import 'package:validation/widgetClean/CustomRowTitle.dart';
+import 'package:validation/widget/widgetClean/CustomRowTitle.dart';
 import 'package:validation/widget/CommonWidget/CustomElevatedButton.dart';
 
 class HomeView extends StatelessWidget {

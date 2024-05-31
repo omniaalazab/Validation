@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:validation/widget/CustomBodyText.dart';
-
-import 'CustomBodyTextsubscription.dart';
+import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
 
 class CustomRowbakacontent extends StatelessWidget {
   CustomRowbakacontent({

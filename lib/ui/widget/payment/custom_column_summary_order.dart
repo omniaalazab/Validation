@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:validation/widgetClean/CustomRowOrder.dart';
+import 'package:validation/ui/widget/payment/CustomRowOrder.dart';
 
 class CustomColumnsummaryOrder extends StatelessWidget {
   const CustomColumnsummaryOrder({

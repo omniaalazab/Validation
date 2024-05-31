@@ -1,8 +1,6 @@
-import 'package:clean_task/Widget/CustomBodyText.dart';
-import 'package:clean_task/Widget/CustomSmallContainer.dart';
 import 'package:flutter/material.dart';
-import 'package:validation/widget/CommonWidget/CustomSmallContainer.dart';
-import 'package:validation/widget/CustomBodyText.dart';
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/widget/shared_widget/CustomSmallContainer.dart';
 
 class CustomRowTitle extends StatelessWidget {
   CustomRowTitle({super.key, required this.title});

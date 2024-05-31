@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:validation/widget/CommonWidget/CustomBodyText.dart';
+import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
 
 class CustomRowOrder extends StatelessWidget {
   CustomRowOrder({

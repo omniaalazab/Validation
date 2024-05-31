@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
 
-import 'package:validation/widget/CustomBodyText.dart';
-
-class validation {
-  static Future getErrorDialogDefult() {
+class CheckConfirmPassword {
+  static Future showErrorDialogDefult() {
     return Get.defaultDialog(
       // titlePadding:
       //     const EdgeInsets.only(top: 10),
@@ -43,7 +42,7 @@ class validation {
     );
   }
 
-  static Future getErrorToast() {
+  static Future showErrorToast() {
     return Future.delayed(const Duration(seconds: 3)).then((value) {
       Fluttertoast.showToast(
           msg: "كلمة المرور السابقة غير صحيحة",
@@ -56,7 +55,7 @@ class validation {
     });
   }
 
-  static Future getSucessToast() {
+  static Future showSucessToast() {
     return Future.delayed(const Duration(seconds: 3)).then((value) {
       Fluttertoast.showToast(
           msg: "تم تغيير كلمة المرور",
