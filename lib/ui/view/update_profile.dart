@@ -2,29 +2,25 @@ import 'package:flutter/material.dart';
 
 import 'package:hexcolor/hexcolor.dart';
 import 'package:validation/controller/change_password_bottom_sheet.dart';
-import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/widget/shared_widget/custom_elevatedbutton.dart';
+import 'package:validation/ui/widget/shared_widget/custom_textfeild.dart';
+
 import 'package:validation/update_profile/CustomDropdownMenu.dart';
 
-import 'package:validation/ui/widget/shared_widget/CustomElevatedButton.dart';
-import 'package:validation/widget/CommonWidget/CustomElevatedButton.dart';
-
-import 'package:validation/widget/CustomTextFeild.dart';
-
-class Home extends StatefulWidget {
-  const Home({super.key});
+class UpdateProfile extends StatefulWidget {
+  const UpdateProfile({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<UpdateProfile> createState() => _UpdateProfileState();
 }
 
-class _HomeState extends State<Home> {
+class _UpdateProfileState extends State<UpdateProfile> {
   TextEditingController usernameController = TextEditingController();
   TextEditingController mailController = TextEditingController();
   TextEditingController phoneNoController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
-  bool nonvisible = true;
-  String? valueselected;
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +32,9 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           centerTitle: true,
           title: CustomBodyText(
-            Bodytext: "تحديث الملف الشخصى",
-            textfontweight: FontWeight.bold,
-            Textsize: 18,
+            bodyText: "تحديث الملف الشخصى",
+            textFontWeight: FontWeight.bold,
+            textSize: 18,
           ),
         ),
         body: SingleChildScrollView(
@@ -84,30 +80,30 @@ class _HomeState extends State<Home> {
                   ),
                   Center(
                     child: CustomBodyText(
-                      Bodytext: "body",
-                      textfontweight: FontWeight.bold,
-                      Textsize: 18,
+                      bodyText: "body",
+                      textFontWeight: FontWeight.bold,
+                      textSize: 18,
                     ),
                   ),
                   const SizedBox(
                     height: 60,
                   ),
                   CustomTextfield(
-                    labeltext: "اسم بالكامل",
+                    labelText: "اسم بالكامل",
                     TextFieldcontroller: usernameController,
                   ),
                   const SizedBox(
                     height: 20,
                   ),
                   CustomTextfield(
-                      labeltext: "رقم الهاتف",
+                      labelText: "رقم الهاتف",
                       TextFieldcontroller: phoneNoController),
                   const SizedBox(
                     height: 20,
                   ),
                   CustomTextfield(
                     TextFieldcontroller: mailController,
-                    labeltext: "البريد الالكترونى",
+                    labelText: "البريد الالكترونى",
                   ),
                   const SizedBox(
                     height: 20,
@@ -124,26 +120,26 @@ class _HomeState extends State<Home> {
                     height: 30,
                   ),
                   CustomElevatedButton(
-                    fontcolor: HexColor("1E1E24"),
-                    textsize: 14,
+                    fontColor: HexColor("1E1E24"),
+                    textSize: 14,
                     fontWeight: FontWeight.w700,
-                    buttontext: "تغيير كلمة المرور",
+                    buttonText: "تغيير كلمة المرور",
                     onPressedFunction: () {
                       ChangePasswordBottomSheet.bottomSheet();
                     },
-                    backcolor: Colors.white,
-                    sidebuttoncolor: HexColor("EFA134"),
+                    backColor: Colors.white,
+                    sideColor: HexColor("EFA134"),
                   ),
                   const SizedBox(
                     height: 50,
                   ),
                   CustomElevatedButton(
-                      buttontext: "تحديث",
+                      buttonText: "تحديث",
                       onPressedFunction: () {},
-                      sidebuttoncolor: HexColor("1E1E24"),
-                      backcolor: HexColor("1E1E24"),
+                      sideColor: HexColor("1E1E24"),
+                      backColor: HexColor("1E1E24"),
                       fontWeight: FontWeight.bold,
-                      fontcolor: Colors.white),
+                      fontColor: Colors.white),
                 ],
               ),
             ),

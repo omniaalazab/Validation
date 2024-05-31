@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
 
 class CustomRowbakacontent extends StatelessWidget {
   CustomRowbakacontent({
@@ -15,14 +15,14 @@ class CustomRowbakacontent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CustomBodyText(
-          Bodytext: bakacontent,
-          Textsize: 13,
-          textfontweight: FontWeight.w400,
+          bodyText: bakacontent,
+          textSize: 13,
+          textFontWeight: FontWeight.w400,
         ),
         CustomBodyText(
-          Bodytext: nocontent,
-          Textsize: 13,
-          textfontweight: FontWeight.w600,
+          bodyText: nocontent,
+          textSize: 13,
+          textFontWeight: FontWeight.w600,
         ),
       ],
     );

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+import 'package:validation/ui/widget/payment/custom_column_summary_order.dart';
+import 'package:validation/ui/widget/payment/custom_radiolist_tile.dart';
+import 'package:validation/ui/widget/payment/custom_row_title.dart';
 
-import 'package:validation/widget/CustomTextFeild.dart';
-import 'package:validation/widget/widgetClean/CustomColumnSummaryOrder.dart';
-import 'package:validation/widget/widgetClean/CustomRadioListTile.dart';
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/widget/shared_widget/custom_elevatedbutton.dart';
+import 'package:validation/ui/widget/shared_widget/custom_textfeild.dart';
 
-import 'package:validation/widget/widgetClean/CustomRowTitle.dart';
-import 'package:validation/widget/CommonWidget/CustomElevatedButton.dart';
-
-class HomeView extends StatelessWidget {
-  HomeView({super.key});
-  TextEditingController codediscountTextController = TextEditingController();
+class Payment extends StatelessWidget {
+  Payment({super.key});
+  TextEditingController codeDiscountTextController = TextEditingController();
   String? payment = "دفع كاش للمندوب";
   @override
   Widget build(BuildContext context) {
@@ -24,9 +23,9 @@ class HomeView extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: CustomBodyText(
-            Bodytext: "الدفع",
-            textfontweight: FontWeight.w900,
-            Textsize: 18,
+            bodyText: "الدفع",
+            textFontWeight: FontWeight.w900,
+            textSize: 18,
           ),
           leading: const Icon(Icons.arrow_back),
         ),
@@ -43,9 +42,9 @@ class HomeView extends StatelessWidget {
                     children: [
                       Center(
                         child: CustomBodyText(
-                          Bodytext: "غسلة (داخلى و خارجى)",
-                          textfontweight: FontWeight.w900,
-                          Textsize: 15,
+                          bodyText: "غسلة (داخلى و خارجى)",
+                          textFontWeight: FontWeight.w900,
+                          textSize: 15,
                         ),
                       ),
                       const SizedBox(
@@ -64,18 +63,18 @@ class HomeView extends StatelessWidget {
                             children: [
                               CustomRadioListTile(
                                 payment: payment,
-                                RadioTitle: "تحويل بنكى",
-                                RadioValue: "تحويل بنكى",
+                                radioTitle: "تحويل بنكى",
+                                radioValue: "تحويل بنكى",
                               ),
                               CustomRadioListTile(
                                 payment: payment,
-                                RadioTitle: "دفع كاش للمندوب",
-                                RadioValue: "دفع كاش للمندوب",
+                                radioTitle: "دفع كاش للمندوب",
+                                radioValue: "دفع كاش للمندوب",
                               ),
                               CustomRadioListTile(
                                   payment: payment,
-                                  RadioTitle: "دفع الكترونى (visa / master)",
-                                  RadioValue: "دفع الكترونى (visa / master)"),
+                                  radioTitle: "دفع الكترونى (visa / master)",
+                                  radioValue: "دفع الكترونى (visa / master)"),
                             ],
                           ),
                         ),
@@ -102,20 +101,20 @@ class HomeView extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(10),
                               child: CustomTextfield(
-                                TextFieldcontroller: codediscountTextController,
-                                labeltext: 'كود الخصم',
+                                TextFieldcontroller: codeDiscountTextController,
+                                labelText: 'كود الخصم',
                               ),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(10.0, 0, 0, 0),
                             child: CustomElevatedButton(
-                              fontcolor: Colors.white,
-                              backcolor: HexColor("1E1E24"),
-                              textsize: 14,
-                              buttontext: "تطبيق",
+                              fontColor: Colors.white,
+                              backColor: HexColor("1E1E24"),
+                              textSize: 14,
+                              buttonText: "تطبيق",
                               onPressedFunction: () {},
-                              widthbutton:
+                              widthButton:
                                   MediaQuery.of(context).size.width * 0.2,
                             ),
                           ),
@@ -141,7 +140,7 @@ class HomeView extends StatelessWidget {
                         child: Padding(
                           padding: EdgeInsets.all(30),
                           // fromLTRB(15, 25, 15, 25),
-                          child: CustomColumnsummaryOrder(),
+                          child: CustomColumnSummaryOrder(),
                         ),
                       ),
                     ],
@@ -153,12 +152,12 @@ class HomeView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(8, 0, 8, 20),
                   child: CustomElevatedButton(
-                    textsize: 14,
-                    fontcolor: Colors.white,
-                    backcolor: HexColor("1E1E24"),
-                    buttontext: "ادفع الان",
+                    textSize: 14,
+                    fontColor: Colors.white,
+                    backColor: HexColor("1E1E24"),
+                    buttonText: "ادفع الان",
                     onPressedFunction: () {},
-                    widthbutton: double.infinity,
+                    widthButton: double.infinity,
                   ),
                 ),
               ],

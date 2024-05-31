@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
 
 class CheckConfirmPassword {
   static Future showErrorDialogDefult() {
@@ -27,8 +28,8 @@ class CheckConfirmPassword {
               height: 15,
             ),
             CustomBodyText(
-              Textsize: 13,
-              Bodytext: "... من فضلك انتظر ",
+              textSize: 13,
+              bodyText: "... من فضلك انتظر ",
             ),
             const SizedBox(
               height: 15,

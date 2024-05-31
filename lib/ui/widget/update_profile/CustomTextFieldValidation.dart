@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
 
-class CustomTextfieldvalidation extends StatefulWidget {
-  CustomTextfieldvalidation({
+class CustomTextFieldValidation extends StatefulWidget {
+  CustomTextFieldValidation({
     super.key,
-    required this.labeltext,
-    required this.TextEditingValidationcontroller,
+    required this.labelText,
+    required this.textEditingValidatioCnontroller,
     required this.validatorFunction,
   });
-  TextEditingController TextEditingValidationcontroller;
-  String labeltext;
+  TextEditingController textEditingValidatioCnontroller;
+  String labelText;
   String? Function(String?)? validatorFunction;
 
   @override
-  State<CustomTextfieldvalidation> createState() =>
-      _CustomTextfieldvalidationState();
+  State<CustomTextFieldValidation> createState() =>
+      _CustomTextFieldValidationState();
 }
 
-class _CustomTextfieldvalidationState extends State<CustomTextfieldvalidation> {
-  var isobsecure;
+class _CustomTextFieldValidationState extends State<CustomTextFieldValidation> {
+  var isObsecure;
 
   final formKey = GlobalKey<FormState>();
   @override
   void initState() {
-    isobsecure = true;
+    isObsecure = true;
     // TODO: implement initState
     super.initState();
   }
@@ -40,24 +40,24 @@ class _CustomTextfieldvalidationState extends State<CustomTextfieldvalidation> {
           height: 70,
           width: double.infinity,
           child: TextFormField(
-            obscureText: isobsecure,
-            controller: widget.TextEditingValidationcontroller,
+            obscureText: isObsecure,
+            controller: widget.textEditingValidatioCnontroller,
             onChanged: (value) {},
             decoration: InputDecoration(
               suffix: IconButton(
-                icon: isobsecure
+                icon: isObsecure
                     ? const Icon(Icons.visibility)
                     : const Icon(Icons.visibility_off),
                 onPressed: () {
                   setState(() {
-                    isobsecure = !isobsecure;
+                    isObsecure = !isObsecure;
                   });
                 },
               ),
               label: CustomBodyText(
-                Textsize: 14,
-                textfontcolor: HexColor("1E1E24").withOpacity(.8),
-                Bodytext: widget.labeltext,
+                textSize: 14,
+                textFontColor: HexColor("1E1E24").withOpacity(.8),
+                bodyText: widget.labelText,
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),

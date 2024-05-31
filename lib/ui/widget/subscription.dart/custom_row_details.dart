@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
-import 'package:validation/ui/widget/shared_widget/CustomSmallContainer.dart';
+
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/widget/shared_widget/custom_small_container.dart';
 
 class CustomRowDetail extends StatelessWidget {
   CustomRowDetail({super.key, required this.title, required this.title2});
@@ -18,15 +19,15 @@ class CustomRowDetail extends StatelessWidget {
             width: 10,
           ),
           CustomBodyText(
-            Bodytext: title,
-            textfontweight: FontWeight.w400,
-            Textsize: 13,
+            bodyText: title,
+            textFontWeight: FontWeight.w400,
+            textSize: 13,
           ),
         ]),
         CustomBodyText(
-          Bodytext: title2,
-          textfontweight: FontWeight.w400,
-          Textsize: 15,
+          bodyText: title2,
+          textFontWeight: FontWeight.w400,
+          textSize: 15,
         ),
       ],
     );

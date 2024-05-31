@@ -5,22 +5,22 @@ class CustomRadioListTile extends StatelessWidget {
   CustomRadioListTile({
     super.key,
     required this.payment,
-    required this.RadioTitle,
-    required this.RadioValue,
+    required this.radioTitle,
+    required this.radioValue,
   });
-  String RadioTitle;
-  String RadioValue;
+  String radioTitle;
+  String radioValue;
   final String? payment;
 
   @override
   Widget build(BuildContext context) {
     return RadioListTile(
         title: Text(
-          RadioTitle,
+          radioTitle,
           style: const TextStyle(
               fontFamily: "Cairo", fontSize: 14, fontWeight: FontWeight.w500),
         ),
-        value: RadioValue,
+        value: radioValue,
         groupValue: payment,
         selectedTileColor: HexColor("EFA134"),
         activeColor: HexColor("EFA134"),

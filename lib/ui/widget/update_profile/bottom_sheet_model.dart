@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
 import 'package:validation/ui/widget/update_profile/check_confirm_password.dart';
 import 'package:validation/widget/CommonWidget/CustomElevatedButton.dart';
 import 'package:validation/widget/CustomTextFieldValidation.dart';
@@ -17,9 +18,9 @@ class BottomSheetModel extends StatelessWidget {
       child: ListView(
         children: [
           CustomBodyText(
-            Bodytext: "تغيير كلمة المرور",
-            Textsize: 18,
-            textfontweight: FontWeight.normal,
+            bodyText: "تغيير كلمة المرور",
+            textSize: 18,
+            textFontWeight: FontWeight.normal,
           ),
           const SizedBox(
             height: 40,
@@ -75,12 +76,12 @@ class BottomSheetModel extends StatelessWidget {
                 bottom: MediaQuery.of(context).viewInsets.bottom),
           ),
           CustomElevatedButton(
-            textsize: 18,
-            sidebuttoncolor: HexColor("1E1E24"),
-            backcolor: HexColor("1E1E24"),
+            textSize: 18,
+            sideButtonColor: HexColor("1E1E24"),
+            backColor: HexColor("1E1E24"),
             fontWeight: FontWeight.normal,
-            fontcolor: Colors.white,
-            buttontext: "تغيير كلمة المرور",
+            fontColor: Colors.white,
+            buttonText: "تغيير كلمة المرور",
             onPressedFunction: () {
               if (confirmPWController.text != newPWController.text ||
                   confirmPWController.text == "" ||

@@ -8,8 +8,8 @@ import 'package:validation/ui/widget/subscription.dart/custom_row_details.dart';
 
 import 'package:validation/widget/widgetSubscribtion/CustomRowbakaContent.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Subscription extends StatelessWidget {
+  const Subscription({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,9 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: CustomBodyText(
-            Bodytext: "الاشتراكات",
-            textfontweight: FontWeight.w900,
-            Textsize: 18,
+            bodyText: "الاشتراكات",
+            textFontWeight: FontWeight.w900,
+            textSize: 18,
           ),
         ),
         body: SingleChildScrollView(
@@ -45,18 +45,18 @@ class Home extends StatelessWidget {
                   ),
                   Center(
                     child: CustomBodyText(
-                      Bodytext: "الباقة السباعية",
-                      textfontweight: FontWeight.w900,
-                      Textsize: 20,
+                      bodyText: "الباقة السباعية",
+                      textFontWeight: FontWeight.w900,
+                      textSize: 20,
                     ),
                   ),
                   const SizedBox(
                     height: 10,
                   ),
                   CustomBodyText(
-                    Bodytext: "247.00 ريال",
-                    textfontweight: FontWeight.w900,
-                    Textsize: 22,
+                    bodyText: "247.00 ريال",
+                    textFontWeight: FontWeight.w900,
+                    textSize: 22,
                   ),
                   const SizedBox(
                     height: 30,
@@ -76,9 +76,9 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       CustomBodyText(
-                        Bodytext: "29/0",
-                        textfontweight: FontWeight.w500,
-                        Textsize: 16,
+                        bodyText: "29/0",
+                        textFontWeight: FontWeight.w500,
+                        textSize: 16,
                       ),
                     ],
                   ),
@@ -86,9 +86,9 @@ class Home extends StatelessWidget {
                     height: 30,
                   ),
                   CustomBodyText(
-                    Bodytext: " عدد الغسلات المستهلكة:   0 ",
-                    textfontweight: FontWeight.w600,
-                    Textsize: 16,
+                    bodyText: " عدد الغسلات المستهلكة:   0 ",
+                    textFontWeight: FontWeight.w600,
+                    textSize: 16,
                   ),
                   const SizedBox(
                     height: 30,
@@ -97,10 +97,10 @@ class Home extends StatelessWidget {
                     padding: const EdgeInsets.all(20.0),
                     child: ElevatedButton.icon(
                       label: CustomBodyText(
-                          Bodytext: "تفاصيل الباقة",
-                          Textsize: 16,
-                          textfontweight: FontWeight.w900,
-                          textfontcolor: Colors.white),
+                          bodyText: "تفاصيل الباقة",
+                          textSize: 16,
+                          textFontWeight: FontWeight.w900,
+                          textFontColor: Colors.white),
                       icon: const Icon(
                         Icons.subscriptions,
                         color: Colors.white,
@@ -167,9 +167,9 @@ class Home extends StatelessWidget {
                                     width: 10,
                                   ),
                                   CustomBodyText(
-                                    Bodytext: "محتويات الباقة",
-                                    textfontweight: FontWeight.w900,
-                                    Textsize: 16,
+                                    bodyText: "محتويات الباقة",
+                                    textFontWeight: FontWeight.w900,
+                                    textSize: 16,
                                   ),
                                 ]),
                           ),
@@ -177,29 +177,29 @@ class Home extends StatelessWidget {
                             height: 40,
                           ),
                           CustomRowbakacontent(
-                            bakacontent: " فواحة:",
-                            nocontent: "29/0",
+                            bakaContent: " فواحة:",
+                            numContent: "29/0",
                           ),
                           const SizedBox(
                             height: 25,
                           ),
                           CustomRowbakacontent(
-                            bakacontent: " دعاسات (قطعتين):",
-                            nocontent: "29/0",
+                            bakaContent: " دعاسات (قطعتين):",
+                            numContent: "29/0",
                           ),
                           const SizedBox(
                             height: 25,
                           ),
                           CustomRowbakacontent(
-                            bakacontent: " مناديل:",
-                            nocontent: "29/0",
+                            bakaContent: " مناديل:",
+                            numContent: "29/0",
                           ),
                           const SizedBox(
                             height: 25,
                           ),
                           CustomRowbakacontent(
-                            bakacontent: " قفازات قياده:",
-                            nocontent: "29/0",
+                            bakaContent: " قفازات قياده:",
+                            numContent: "29/0",
                           ),
                           const SizedBox(
                             height: 25,

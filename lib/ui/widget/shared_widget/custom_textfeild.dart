@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
 
 class CustomTextfield extends StatelessWidget {
   CustomTextfield(
-      {super.key, required this.labeltext, required this.TextFieldcontroller});
+      {super.key, required this.labelText, required this.TextFieldcontroller});
   TextEditingController TextFieldcontroller;
-  String labeltext;
+  String labelText;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,9 @@ class CustomTextfield extends StatelessWidget {
       decoration: InputDecoration(
         //hintText: 'كود الخصم',
         label: CustomBodyText(
-          Bodytext: labeltext,
-          Textsize: 13,
-          textfontcolor: const Color.fromARGB(255, 200, 200, 200),
+          bodyText: labelText,
+          textSize: 13,
+          textFontColor: const Color.fromARGB(255, 200, 200, 200),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),

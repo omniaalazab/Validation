@@ -1,44 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/ui/widget/shared_widget/CustomBodyText.dart';
+
+import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
 
 class CustomElevatedValidationButton extends StatelessWidget {
   CustomElevatedValidationButton(
       {super.key,
-      required this.buttontext,
+      required this.buttonText,
       required this.onPressedFunction,
-      required this.backcolor,
-      required this.fontcolor,
-      this.sidecolor,
+      required this.backColor,
+      required this.fontColor,
+      this.sideColor,
       this.fontWeight = FontWeight.normal,
-      this.textsize = 16,
-      this.widthbutton = double.infinity});
-  String buttontext;
-  double textsize;
-  Color backcolor;
-  Color fontcolor;
-  Color? sidecolor;
+      this.textSize = 16,
+      this.widthButton = double.infinity});
+  String buttonText;
+  double textSize;
+  Color backColor;
+  Color fontColor;
+  Color? sideColor;
   FontWeight fontWeight;
-  double widthbutton;
+  double widthButton;
   Function()? onPressedFunction;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressedFunction,
       style: ElevatedButton.styleFrom(
-        minimumSize: Size(widthbutton, 50),
-        backgroundColor: backcolor,
+        minimumSize: Size(widthButton, 50),
+        backgroundColor: backColor,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
             side: BorderSide(
-              color: sidecolor ??= HexColor("EFA134"),
+              color: sideColor ??= HexColor("EFA134"),
             )),
       ),
       child: CustomBodyText(
-        Bodytext: buttontext,
-        textfontweight: fontWeight,
-        textfontcolor: fontcolor,
-        Textsize: textsize,
+        bodyText: buttonText,
+        textFontWeight: fontWeight,
+        textFontColor: fontColor,
+        textSize: textSize,
       ),
     );
   }

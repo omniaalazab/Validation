@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:validation/ui/widget/payment/CustomRowOrder.dart';
+import 'package:validation/ui/widget/payment/custom_row_order.dart';
 
-class CustomColumnsummaryOrder extends StatelessWidget {
-  const CustomColumnsummaryOrder({
+class CustomColumnSummaryOrder extends StatelessWidget {
+  const CustomColumnSummaryOrder({
     super.key,
   });
 
@@ -11,28 +11,28 @@ class CustomColumnsummaryOrder extends StatelessWidget {
     return Column(
       children: [
         CustomRowOrder(
-          SummaryOrderTitle: " سعر الخدمة :",
+          summaryOrderTitle: " سعر الخدمة :",
           orderPrice: "120 ريال",
         ),
         const SizedBox(
           height: 10,
         ),
         CustomRowOrder(
-          SummaryOrderTitle: " الضريبة :",
+          summaryOrderTitle: " الضريبة :",
           orderPrice: "10 ريال",
         ),
         const SizedBox(
           height: 10,
         ),
         CustomRowOrder(
-          SummaryOrderTitle: "الخدمات الاضافية :",
+          summaryOrderTitle: "الخدمات الاضافية :",
           orderPrice: "30 ريال",
         ),
         const SizedBox(
           height: 10,
         ),
         CustomRowOrder(
-          SummaryOrderTitle: " قيمة الخصم :",
+          summaryOrderTitle: " قيمة الخصم :",
           orderPrice: "120 ريال",
         ),
         const SizedBox(
@@ -43,7 +43,7 @@ class CustomColumnsummaryOrder extends StatelessWidget {
           indent: 20,
         ),
         CustomRowOrder(
-          SummaryOrderTitle: "المجموع :",
+          summaryOrderTitle: "المجموع :",
           orderPrice: "130 ريال",
         ),
       ],

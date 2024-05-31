@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
-import 'package:validation/ui/widget/shared_widget/CustomSmallContainer.dart';
+
+import 'package:validation/ui/widget/shared_widget/custom_small_container.dart';
 
 class CustomRowTitle extends StatelessWidget {
   CustomRowTitle({super.key, required this.title});
@@ -14,9 +15,9 @@ class CustomRowTitle extends StatelessWidget {
           width: 10,
         ),
         CustomBodyText(
-          Bodytext: title,
-          textfontweight: FontWeight.w900,
-          Textsize: 12,
+          bodyText: title,
+          textFontWeight: FontWeight.w900,
+          textSize: 12,
         ),
       ],
     );

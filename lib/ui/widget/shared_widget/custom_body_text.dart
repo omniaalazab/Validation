@@ -4,27 +4,27 @@ import 'package:hexcolor/hexcolor.dart';
 class CustomBodyText extends StatelessWidget {
   CustomBodyText({
     super.key,
-    required this.Bodytext,
-    this.Textsize = 14,
-    this.textfontcolor,
+    required this.bodyText,
+    this.textSize = 14,
+    this.textFontColor,
     //HexColor("1E1E24"),
-    this.textfontweight = FontWeight.w500,
+    this.textFontWeight = FontWeight.w500,
     // this.textAlign = TextAlign.center
   });
-  String Bodytext;
-  double? Textsize;
-  Color? textfontcolor;
+  String bodyText;
+  double? textSize;
+  Color? textFontColor;
   // TextAlign textAlign;
-  FontWeight textfontweight;
+  FontWeight textFontWeight;
   @override
   Widget build(BuildContext context) {
     return Text(
-      Bodytext,
+      bodyText,
       style: TextStyle(
         fontFamily: 'Cairo',
-        fontSize: Textsize,
-        fontWeight: textfontweight,
-        color: textfontcolor ?? HexColor("1E1E24"),
+        fontSize: textSize,
+        fontWeight: textFontWeight,
+        color: textFontColor ?? HexColor("1E1E24"),
       ),
       // textAlign: textAlign,
     );
