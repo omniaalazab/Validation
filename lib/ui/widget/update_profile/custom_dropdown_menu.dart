@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/helper/text_style_helper.dart';
 
 class CustomDropdownMenu extends StatelessWidget {
   const CustomDropdownMenu({
@@ -27,18 +27,20 @@ class CustomDropdownMenu extends StatelessWidget {
       width: 350,
       enableSearch: true,
       menuHeight: 300,
-      label: CustomBodyText(
-        bodyText: "المدينة",
-        textSize: 13,
-        textFontColor: const Color.fromARGB(255, 200, 200, 200),
+      label: Text(
+        "المدينة",
+        style: TextStyleHelper.textStylefontSize13.copyWith(
+          color: const Color.fromARGB(255, 200, 200, 200),
+        ),
       ),
+
       trailingIcon: const Icon(Icons.keyboard_arrow_down_rounded,
           color: Color.fromARGB(255, 135, 135, 135)),
       selectedTrailingIcon: const Icon(Icons.keyboard_arrow_up_rounded,
           color: Color.fromARGB(255, 135, 135, 135)),
       inputDecorationTheme: InputDecorationTheme(
-        // filled: true,
-        // fillColor: Colors.white,
+        filled: true,
+        fillColor: const Color.fromARGB(255, 200, 200, 200).withOpacity(.3),
         hintStyle: const TextStyle(
             color: Color.fromARGB(255, 135, 135, 135),
             fontFamily: 'Cairo',

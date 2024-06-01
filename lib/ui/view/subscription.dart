@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:hexcolor/hexcolor.dart';
+import 'package:validation/ui/helper/text_style_helper.dart';
 
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
 import 'package:validation/ui/widget/shared_widget/custom_small_container.dart';
 import 'package:validation/ui/widget/subscription.dart/custom_row_details.dart';
-
-import 'package:validation/widget/widgetSubscribtion/CustomRowbakaContent.dart';
+import 'package:validation/ui/widget/subscription.dart/custom_rowbaka_content.dart';
 
 class Subscription extends StatelessWidget {
   const Subscription({super.key});
@@ -20,10 +20,9 @@ class Subscription extends StatelessWidget {
         //HexColor("F6D71C"),
         appBar: AppBar(
           centerTitle: true,
-          title: CustomBodyText(
-            bodyText: "الاشتراكات",
-            textFontWeight: FontWeight.w900,
-            textSize: 18,
+          title: Text(
+            "الاشتراكات",
+            style: TextStyleHelper.textStylefontSize18,
           ),
         ),
         body: SingleChildScrollView(
@@ -44,20 +43,16 @@ class Subscription extends StatelessWidget {
                     ),
                   ),
                   Center(
-                    child: CustomBodyText(
-                      bodyText: "الباقة السباعية",
-                      textFontWeight: FontWeight.w900,
-                      textSize: 20,
+                    child: Text(
+                      "الباقة السباعية",
+                      style: TextStyleHelper.textStylefontSize20,
                     ),
                   ),
                   const SizedBox(
                     height: 10,
                   ),
-                  CustomBodyText(
-                    bodyText: "247.00 ريال",
-                    textFontWeight: FontWeight.w900,
-                    textSize: 22,
-                  ),
+                  Text("247.00 ريال",
+                      style: TextStyleHelper.textStylefontSize22),
                   const SizedBox(
                     height: 30,
                   ),
@@ -75,20 +70,18 @@ class Subscription extends StatelessWidget {
                           color: Color.fromARGB(255, 241, 230, 196),
                         ),
                       ),
-                      CustomBodyText(
-                        bodyText: "29/0",
-                        textFontWeight: FontWeight.w500,
-                        textSize: 16,
+                      Text(
+                        "29/0",
+                        style: TextStyleHelper.textStylefontSize16,
                       ),
                     ],
                   ),
                   const SizedBox(
                     height: 30,
                   ),
-                  CustomBodyText(
-                    bodyText: " عدد الغسلات المستهلكة:   0 ",
-                    textFontWeight: FontWeight.w600,
-                    textSize: 16,
+                  Text(
+                    " عدد الغسلات المستهلكة:   0 ",
+                    style: TextStyleHelper.textStylefontSize16,
                   ),
                   const SizedBox(
                     height: 30,
@@ -96,11 +89,13 @@ class Subscription extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: ElevatedButton.icon(
-                      label: CustomBodyText(
-                          bodyText: "تفاصيل الباقة",
-                          textSize: 16,
-                          textFontWeight: FontWeight.w900,
-                          textFontColor: Colors.white),
+                      label: Text(
+                        "تفاصيل الباقة",
+                        style: TextStyleHelper.textStylefontSize16.copyWith(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
                       icon: const Icon(
                         Icons.subscriptions,
                         color: Colors.white,
@@ -166,38 +161,37 @@ class Subscription extends StatelessWidget {
                                   const SizedBox(
                                     width: 10,
                                   ),
-                                  CustomBodyText(
-                                    bodyText: "محتويات الباقة",
-                                    textFontWeight: FontWeight.w900,
-                                    textSize: 16,
+                                  Text(
+                                    "محتويات الباقة",
+                                    style: TextStyleHelper.textStylefontSize16,
                                   ),
                                 ]),
                           ),
                           const SizedBox(
                             height: 40,
                           ),
-                          CustomRowbakacontent(
+                          CustomRowbakaContent(
                             bakaContent: " فواحة:",
                             numContent: "29/0",
                           ),
                           const SizedBox(
                             height: 25,
                           ),
-                          CustomRowbakacontent(
+                          CustomRowbakaContent(
                             bakaContent: " دعاسات (قطعتين):",
                             numContent: "29/0",
                           ),
                           const SizedBox(
                             height: 25,
                           ),
-                          CustomRowbakacontent(
+                          CustomRowbakaContent(
                             bakaContent: " مناديل:",
                             numContent: "29/0",
                           ),
                           const SizedBox(
                             height: 25,
                           ),
-                          CustomRowbakacontent(
+                          CustomRowbakaContent(
                             bakaContent: " قفازات قياده:",
                             numContent: "29/0",
                           ),

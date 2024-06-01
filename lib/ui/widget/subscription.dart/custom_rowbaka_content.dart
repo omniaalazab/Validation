@@ -1,29 +1,30 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:flutter/widgets.dart';
 
-class CustomRowbakacontent extends StatelessWidget {
-  CustomRowbakacontent({
-    required this.bakacontent,
-    required this.nocontent,
+import 'package:validation/ui/helper/text_style_helper.dart';
+
+class CustomRowbakaContent extends StatelessWidget {
+  CustomRowbakaContent({
+    required this.bakaContent,
+    required this.numContent,
     super.key,
   });
-  String bakacontent;
-  String nocontent;
+  String bakaContent;
+  String numContent;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CustomBodyText(
-          bodyText: bakacontent,
-          textSize: 13,
-          textFontWeight: FontWeight.w400,
+        Text(
+          bakaContent,
+          style: TextStyleHelper.textStylefontSize13,
         ),
-        CustomBodyText(
-          bodyText: nocontent,
-          textSize: 13,
-          textFontWeight: FontWeight.w600,
-        ),
+        Text(numContent,
+            style: TextStyleHelper.textStylefontSize14
+                .copyWith(fontWeight: FontWeight.w600)),
+        // FontWeight.w600,
       ],
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/helper/text_style_helper.dart';
 
 class CustomTextFieldValidation extends StatefulWidget {
   CustomTextFieldValidation({
@@ -54,10 +54,11 @@ class _CustomTextFieldValidationState extends State<CustomTextFieldValidation> {
                   });
                 },
               ),
-              label: CustomBodyText(
-                textSize: 14,
-                textFontColor: HexColor("1E1E24").withOpacity(.8),
-                bodyText: widget.labelText,
+              label: Text(
+                widget.labelText,
+                style: TextStyleHelper.textStylefontSize14.copyWith(
+                  color: HexColor("1E1E24").withOpacity(.8),
+                ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:validation/ui/helper/text_style_helper.dart';
 
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
-
-class CustomElevatedValidationButton extends StatelessWidget {
-  CustomElevatedValidationButton(
+class CustomElevatedButton extends StatelessWidget {
+  CustomElevatedButton(
       {super.key,
       required this.buttonText,
       required this.onPressedFunction,
@@ -35,11 +34,10 @@ class CustomElevatedValidationButton extends StatelessWidget {
               color: sideColor ??= HexColor("EFA134"),
             )),
       ),
-      child: CustomBodyText(
-        bodyText: buttonText,
-        textFontWeight: fontWeight,
-        textFontColor: fontColor,
-        textSize: textSize,
+      child: Text(
+        buttonText,
+        style: TextStyleHelper.textStylefontSize16.copyWith(
+            fontWeight: fontWeight, color: fontColor, fontSize: textSize),
       ),
     );
   }

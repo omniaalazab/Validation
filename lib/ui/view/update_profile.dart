@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:hexcolor/hexcolor.dart';
 import 'package:validation/controller/change_password_bottom_sheet.dart';
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/helper/text_style_helper.dart';
+
 import 'package:validation/ui/widget/shared_widget/custom_elevatedbutton.dart';
 import 'package:validation/ui/widget/shared_widget/custom_textfeild.dart';
-
-import 'package:validation/update_profile/CustomDropdownMenu.dart';
+import 'package:validation/ui/widget/update_profile/custom_dropdown_menu.dart';
 
 class UpdateProfile extends StatefulWidget {
   const UpdateProfile({super.key});
@@ -31,10 +31,9 @@ class _UpdateProfileState extends State<UpdateProfile> {
         //HexColor("F6D71C"),
         appBar: AppBar(
           centerTitle: true,
-          title: CustomBodyText(
-            bodyText: "تحديث الملف الشخصى",
-            textFontWeight: FontWeight.bold,
-            textSize: 18,
+          title: Text(
+            "تحديث الملف الشخصى",
+            style: TextStyleHelper.textStylefontSize18,
           ),
         ),
         body: SingleChildScrollView(
@@ -79,12 +78,10 @@ class _UpdateProfileState extends State<UpdateProfile> {
                     height: 10,
                   ),
                   Center(
-                    child: CustomBodyText(
-                      bodyText: "body",
-                      textFontWeight: FontWeight.bold,
-                      textSize: 18,
-                    ),
-                  ),
+                      child: Text(
+                    "body",
+                    style: TextStyleHelper.textStylefontSize18,
+                  )),
                   const SizedBox(
                     height: 60,
                   ),
@@ -121,7 +118,6 @@ class _UpdateProfileState extends State<UpdateProfile> {
                   ),
                   CustomElevatedButton(
                     fontColor: HexColor("1E1E24"),
-                    textSize: 14,
                     fontWeight: FontWeight.w700,
                     buttonText: "تغيير كلمة المرور",
                     onPressedFunction: () {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/helper/text_style_helper.dart';
 
 class CustomTextfield extends StatelessWidget {
   CustomTextfield(
@@ -16,10 +16,11 @@ class CustomTextfield extends StatelessWidget {
       onSubmitted: (value) {},
       decoration: InputDecoration(
         //hintText: 'كود الخصم',
-        label: CustomBodyText(
-          bodyText: labelText,
-          textSize: 13,
-          textFontColor: const Color.fromARGB(255, 200, 200, 200),
+        label: Text(
+          labelText,
+          style: TextStyleHelper.textStylefontSize13.copyWith(
+            color: const Color.fromARGB(255, 200, 200, 200),
+          ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),

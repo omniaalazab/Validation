@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:flutter/widgets.dart';
+
+import 'package:validation/ui/helper/text_style_helper.dart';
 
 class CustomRowOrder extends StatelessWidget {
   CustomRowOrder({
@@ -14,8 +16,11 @@ class CustomRowOrder extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CustomBodyText(bodyText: summaryOrderTitle),
-        CustomBodyText(bodyText: orderPrice),
+        Text(
+          summaryOrderTitle,
+          style: TextStyleHelper.textStylefontSize14,
+        ),
+        Text(orderPrice, style: TextStyleHelper.textStylefontSize14),
       ],
     );
   }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
+import 'package:validation/ui/widget/shared_widget/custom_elevatedbutton.dart';
+import 'package:validation/ui/helper/text_style_helper.dart';
+import 'package:validation/ui/widget/update_profile/custom_textfield_validation.dart';
 import 'package:validation/ui/widget/update_profile/check_confirm_password.dart';
-import 'package:validation/widget/CommonWidget/CustomElevatedButton.dart';
-import 'package:validation/widget/CustomTextFieldValidation.dart';
 
 class BottomSheetModel extends StatelessWidget {
   BottomSheetModel({super.key});
@@ -17,17 +18,18 @@ class BottomSheetModel extends StatelessWidget {
       padding: const EdgeInsets.all(15),
       child: ListView(
         children: [
-          CustomBodyText(
-            bodyText: "تغيير كلمة المرور",
-            textSize: 18,
-            textFontWeight: FontWeight.normal,
+          Center(
+            child: Text(
+              "تغيير كلمة المرور",
+              style: TextStyleHelper.textStylefontSize18,
+            ),
           ),
           const SizedBox(
             height: 40,
           ),
-          CustomTextfieldvalidation(
-            labeltext: "كلمة المرور القديمة",
-            TextEditingValidationcontroller: oldPWController,
+          CustomTextFieldValidation(
+            labelText: "كلمة المرور القديمة",
+            textEditingValidatioCnontroller: oldPWController,
             validatorFunction: (value) {
               if (value!.isEmpty) {
                 return "usernsme cann't be empty";
@@ -39,9 +41,9 @@ class BottomSheetModel extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          CustomTextfieldvalidation(
-            labeltext: "كلمة المرور الجديدة",
-            TextEditingValidationcontroller: newPWController,
+          CustomTextFieldValidation(
+            labelText: "كلمة المرور الجديدة",
+            textEditingValidatioCnontroller: newPWController,
             validatorFunction: (value) {
               if (value!.isEmpty) {
                 return "password can't be empty";
@@ -55,9 +57,9 @@ class BottomSheetModel extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          CustomTextfieldvalidation(
-            labeltext: "تاكيد كلمة المرور ",
-            TextEditingValidationcontroller: confirmPWController,
+          CustomTextFieldValidation(
+            labelText: "تاكيد كلمة المرور ",
+            textEditingValidatioCnontroller: confirmPWController,
             validatorFunction: (value) {
               if (value!.isEmpty) {
                 return "password cann't be empty";
@@ -77,7 +79,7 @@ class BottomSheetModel extends StatelessWidget {
           ),
           CustomElevatedButton(
             textSize: 18,
-            sideButtonColor: HexColor("1E1E24"),
+            sideColor: HexColor("1E1E24"),
             backColor: HexColor("1E1E24"),
             fontWeight: FontWeight.normal,
             fontColor: Colors.white,

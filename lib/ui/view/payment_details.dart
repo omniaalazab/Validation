@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:hexcolor/hexcolor.dart';
+import 'package:validation/ui/helper/text_style_helper.dart';
 import 'package:validation/ui/widget/payment/custom_column_summary_order.dart';
 import 'package:validation/ui/widget/payment/custom_radiolist_tile.dart';
 import 'package:validation/ui/widget/payment/custom_row_title.dart';
 
-import 'package:validation/ui/widget/shared_widget/custom_body_text.dart';
 import 'package:validation/ui/widget/shared_widget/custom_elevatedbutton.dart';
 import 'package:validation/ui/widget/shared_widget/custom_textfeild.dart';
 
@@ -22,10 +23,9 @@ class Payment extends StatelessWidget {
         //HexColor("F6D71C"),
         appBar: AppBar(
           centerTitle: true,
-          title: CustomBodyText(
-            bodyText: "الدفع",
-            textFontWeight: FontWeight.w900,
-            textSize: 18,
+          title: Text(
+            "الدفع",
+            style: TextStyleHelper.textStylefontSize18,
           ),
           leading: const Icon(Icons.arrow_back),
         ),
@@ -41,10 +41,9 @@ class Payment extends StatelessWidget {
                   child: Column(
                     children: [
                       Center(
-                        child: CustomBodyText(
-                          bodyText: "غسلة (داخلى و خارجى)",
-                          textFontWeight: FontWeight.w900,
-                          textSize: 15,
+                        child: Text(
+                          "غسلة (داخلى و خارجى)",
+                          style: TextStyleHelper.textStylefontSize15,
                         ),
                       ),
                       const SizedBox(
